@@ -1,0 +1,12 @@
+SMAP
+delete_005ftask_jsp.java
+JSP
+*S JSP
+*F
++ 0 delete_task.jsp
+delete_task.jsp
+*L
+1,12:47
+13,11:60
+23,4:71
+*E

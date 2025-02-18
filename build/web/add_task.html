@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Task</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .form {
+                max-width: 400px;
+                width: 100%;
+                background-color: #fff;
+                padding: 30px;
+                box-shadow: 0px 0px 0px 4px rgba(52, 52, 53, 0.185);
+                display: flex;
+                flex-direction: column;
+                border-radius: 10px;
+                margin-left: 100px;
+            }
+
+            .title {
+                text-align: center;
+                font-size: 2rem;
+                margin-bottom: 20px;
+                color: #1a202c;
+            }
+
+            .label {
+                color: rgb(0, 0, 0);
+                margin-bottom: 4px;
+            }
+
+            .input {
+                padding: 10px;
+                margin-bottom: 20px;
+                width: 100%;
+                font-size: 1rem;
+                color: #4a5568;
+                outline: none;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .input:focus {
+                background-color: #fff;
+                box-shadow: 0 0 0 2px #cbd5e0;
+            }
+
+            .input:valid {
+                border: 1px solid green;
+            }
+
+            .input:invalid {
+                border: 1px solid rgba(14, 14, 14, 0.205);
+            }
+
+            body {
+                background: url("simpleformback.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+
+            .form-submit-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: inherit;
+                color: #fff;
+                background-color: #212121;
+                border: none;
+                width: 100%;
+                padding: 12px 16px;
+                font-size: inherit;
+                gap: 8px;
+                margin: 12px 0;
+                cursor: pointer;
+                border-radius: 6px;
+                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+            }
+
+            .form-submit-btn:hover {
+                background-color: #313131;
+            }
+
+            .gender {
+                margin-bottom: 20px;
+            }
+
+            .gender label {
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form class="form" action="add_task.jsp">
+            <span class="title">Add Task</span>
+            
+            <label class="label">Task Title</label>
+            <input type="text" name="task_name" required class="input">
+
+            <label class="label">Priority</label>
+            <div class="gender">
+                <input type="radio" id="male" name="Priority" value="low_Priority" required>
+                <label for="male">low Priority</label>
+                
+                <input type="radio" id="female" name="Priority" value="mid_priority" required>
+                <label for="female">mid priority</label>
+                
+                <input type="radio" id="other" name="Priority" value="high_priority" required>
+                <label for="other">high priority</label>
+            </div>
+            
+            <label class="label">Status</label>
+            <input type="text" name="Status"  class="input">
+        
+            <label class="label">Project Name</label>
+            <input type="text" name="Project_Name"  class="input">            
+
+            <label class="label">Assign By</label>
+            <input type="text" name="Assign_By" required class="input">
+            
+            <label class="label">Time Limit In hour</label>
+            <input type="number" name="time_limit" required class="input">
+            
+            <label class="label">Time Spent In hour</label>
+            <input type="number" name="time_spent" class="input">
+            
+            <label class="label">Created</label>
+            <input type="date" name="creating_date" required class="input">
+                       
+            <label class="label">deadline</label>
+            <input type="date" name="deadline" required class="input">
+            
+            <label class="label">Description</label>
+            <textarea name="Description" class="input"></textarea>
+
+            
+            <input type="submit" value="Submit" class="form-submit-btn">
+            <input type="reset" value="Reset" class="form-submit-btn">
+        </form>
+    </body>
+</html>
